@@ -167,7 +167,7 @@ body {
 
 #instructionsButton:hover {
     transform: scale(1.2); /* Enlarges the button on hover */
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff; /* Intensifies the white glow on hover */
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff; 
 }
 
 .buttonsContainer {
