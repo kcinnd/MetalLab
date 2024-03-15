@@ -162,7 +162,8 @@ body {
     color: #000; /* Black text */
     text-shadow: 0 0 5px #fff; /* White text glow */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
-    box-shadow: 0 0 5px #fff, 0 0 10px #fff; /* Initial white glow around the button */
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff;
+    margin-bottom: 50px;
 }
 
 #instructionsButton:hover {
