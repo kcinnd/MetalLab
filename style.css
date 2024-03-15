@@ -207,6 +207,10 @@ body {
     background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
 }
 
+.popup.display-flex {
+    display: flex;
+}
+
 .popupContent {
     position: relative;
     margin: 15% auto;
