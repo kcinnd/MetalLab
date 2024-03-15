@@ -154,14 +154,26 @@ body {
 
 #instructionsButton {
     padding: 15px 30px;
-    font-size: 36px;
+    font-size: 20px;
     border: none;
     cursor: pointer;
+    border-radius: 12px; /* Rounded corners for consistency */
     background: linear-gradient(45deg, #0ff0fc, #1f51ff, #350b99, #02ae23, #39ff14);
     background-size: 300% 300%;
     animation: GradientAnimation 3s ease infinite;
-    margin-bottom: 30px;
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Using background-clip and a transparent color for the text to show the background */
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* Initial glow effect */
+    text-shadow: 0 0 5px #0ff0fc, 0 0 10px #1f51ff, 0 0 15px #350b99, 0 0 20px #02ae23, 0 0 25px #39ff14;
+}
+
+#instructionsButton:hover {
+    transform: scale(1.05); /* Slight enlargement on hover */
+    /* More intense glow on hover */
+    text-shadow: 0 0 10px #0ff0fc, 0 0 20px #1f51ff, 0 0 30px #350b99, 0 0 40px #02ae23, 0 0 50px #39ff14;
 }
 
 @keyframes GradientAnimation {
@@ -180,10 +192,17 @@ body {
     border: none;
     cursor: pointer;
     color: #fff;
+    background-color: #000;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    border-radius: 10px; /* Rounded corners */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Initial glow effect */
+    box-shadow: 0 0 5px currentColor, 0 0 10px currentColor;
 }
 
 .neonButton:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor, 0 0 50px currentColor;
+    /* More intense glow on hover */
+    box-shadow: 0 0 15px currentColor, 0 0 25px currentColor, 0 0 35px currentColor, 0 0 45px currentColor, 0 0 55px currentColor;
 }
