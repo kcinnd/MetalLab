@@ -42,5 +42,10 @@ document.querySelectorAll('.gridContainer img').forEach(item => {
 });
 
 document.getElementById('buttonOne').addEventListener('click', function() {
-    document.getElementById('buttonOnePopup').style.display = 'flex';
+    var popup = document.getElementById('buttonOnePopup');
+    if (popup.style.display === 'flex') {
+        popup.style.display = 'none';
+    } else {
+        popup.style.display = 'flex';
+    }
 });
