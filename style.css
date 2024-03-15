@@ -165,14 +165,37 @@ body {
     /* Using background-clip and a transparent color for the text to show the background */
     color: transparent;
     background-clip: text;
+    z-index: 1; /* Stack above the pseudo-element */
+    overflow: hidden; /* Ensure the pseudo-element doesn't extend outside */
     -webkit-background-clip: text;
     /* Initial glow effect */
     text-shadow: 0 0 5px #0ff0fc, 0 0 10px #1f51ff, 0 0 15px #350b99, 0 0 20px #02ae23, 0 0 25px #39ff14;
 }
 
+#instructionsButton::before {
+    content: '';
+    position: absolute;
+    top: -2px; /* Slightly larger than the border to create the initial glow effect */
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background: linear-gradient(45deg, #0ff0fc, #1f51ff, #350b99, #02ae23, #39ff14);
+    border-radius: 14px; /* Slightly larger than the button's border-radius to maintain the rounded effect */
+    blur: 5px;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#instructionsButton:hover::before {
+    top: -5px; /* Increased size for more intense glow */
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    blur: 10px; /* More intense glow */
+}
+
 #instructionsButton:hover {
     transform: scale(1.05); /* Slight enlargement on hover */
-    /* More intense glow on hover */
     text-shadow: 0 0 10px #0ff0fc, 0 0 20px #1f51ff, 0 0 30px #350b99, 0 0 40px #02ae23, 0 0 50px #39ff14;
 }
 
