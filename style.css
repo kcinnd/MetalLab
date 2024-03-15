@@ -234,3 +234,59 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    position: relative;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0ff0fc, 0 0 15px #0ff0fc; /* Button 1 color glow */
+}
+
+.gridContainer::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 33.33%; /* Position for the middle horizontal line */
+    border-top: 2px solid #0ff0fc; /* Button 1 color */
+    z-index: 1;
+}
+
+.gridContainer::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 66.66%; /* Position for the bottom horizontal line */
+    border-top: 2px solid #0ff0fc; /* Button 1 color */
+    z-index: 1;
+}
+
+.gridContainer img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gridContainer img:hover {
+    transform: scale(1.1); /* Slightly enlarge images on hover */
+    z-index: 2; /* Ensure the image is above the grid lines */
+}
+
+/* Style for the hover message */
+.hoverMessage {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none;
+    z-index: 40;
+    font-size: 14px;
+    color: #000;
+    box-shadow: 0 0 5px #fff;
+}
