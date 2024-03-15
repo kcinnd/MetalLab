@@ -23,3 +23,24 @@ document.getElementById('instructionsButton').addEventListener('click', function
 document.querySelector('.closeButton').addEventListener('click', function() {
     document.getElementById('instructionsPopup').style.display = 'none';
 });
+
+document.querySelectorAll('.gridContainer img').forEach(item => {
+    item.addEventListener('mouseover', (event) => {
+        const message = event.target.getAttribute('data-message');
+        const hoverMessage = document.createElement('div');
+        hoverMessage.classList.add('hoverMessage');
+        hoverMessage.textContent = message;
+        document.body.appendChild(hoverMessage);
+        hoverMessage.style.display = 'block';
+        hoverMessage.style.left = `${event.pageX + 10}px`;
+        hoverMessage.style.top = `${event.pageY + 10}px`;
+    });
+
+    item.addEventListener('mouseout', () => {
+        document.querySelector('.hoverMessage').remove();
+    });
+});
+
+document.getElementById('buttonOne').addEventListener('click', function() {
+    document.getElementById('buttonOnePopup').style.display = 'flex';
+});
