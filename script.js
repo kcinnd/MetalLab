@@ -16,8 +16,10 @@ document.getElementById('submitPassword').addEventListener('click', function() {
     }
 });
 
-// Assuming you have an element with the ID 'closeInstructions' for closing the instructions popup
-document.getElementById('closeInstructions').addEventListener('click', function() {
-    // Hide the instructions popup
+document.getElementById('instructionsButton').addEventListener('click', function() {
+    document.getElementById('instructionsPopup').style.display = 'block';
+});
+
+document.querySelector('.closeButton').addEventListener('click', function() {
     document.getElementById('instructionsPopup').style.display = 'none';
 });
