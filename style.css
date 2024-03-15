@@ -11,6 +11,7 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
+    overflow: hidden;
 }
 
 #overlay {
@@ -26,28 +27,39 @@ body {
 #errorPopup {
     position: fixed;
     padding: 20px;
-    border: 1px solid #fff;
+    border: 2px solid #39ff14;
     background-color: #111;
     z-index: 20;
     text-align: center;
+    box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14;
 }
 
 #passwordInput, #submitPassword {
     margin-top: 10px;
     padding: 10px;
     font-size: 16px;
+    border: 2px solid #39ff14;
+    background-color: #000;
+    color: #39ff14;
+    box-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
+}
+
+#submitPassword:hover {
+    background-color: #39ff14;
     color: #000;
+    box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
 }
 
 #instructionsButton {
     padding: 15px 30px;
-    font-size: 20px;
+    font-size: 36px;
     border: none;
     cursor: pointer;
     background: linear-gradient(45deg, #0ff0fc, #1f51ff, #350b99, #02ae23, #39ff14);
     background-size: 300% 300%;
     animation: GradientAnimation 3s ease infinite;
     margin-bottom: 30px;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
 }
 
 @keyframes GradientAnimation {
@@ -66,9 +78,10 @@ body {
     border: none;
     cursor: pointer;
     color: #fff;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .neonButton:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor, 0 0 50px currentColor;
 }
