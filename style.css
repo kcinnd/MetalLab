@@ -206,3 +206,43 @@ body {
     /* More intense glow on hover */
     box-shadow: 0 0 15px currentColor, 0 0 25px currentColor, 0 0 35px currentColor, 0 0 45px currentColor, 0 0 55px currentColor;
 }
+
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+}
+
+.popupContent {
+    position: relative;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    background: #000; /* Black background */
+    opacity: 0.9; /* Semi-transparency */
+    box-shadow: 0 0 10px #0ff0fc, 0 0 15px #1f51ff, 0 0 20px #350b99, 0 0 25px #02ae23, 0 0 30px #39ff14; /* Glowing border */
+}
+
+.closeButton {
+    color: #ccc;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.closeButton:hover,
+.closeButton:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
