@@ -69,6 +69,6 @@ document.querySelector('#buttonTwoPopup .closePopupButton').addEventListener('cl
     document.querySelector('#buttonTwoPopup .passwordProtection').style.display = 'block';
 });
 
-document.getElementById('button2').addEventListener('click', function() {
+document.getElementById('buttonTwo').addEventListener('click', function() {
     document.getElementById('buttonTwoPopup').style.display = 'flex';
 });
