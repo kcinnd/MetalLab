@@ -249,7 +249,9 @@ body {
     padding: 20px;
     background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
-    box-shadow: 0 0 10px #0ff0fc, 0 0 15px #0ff0fc; /* Button 1 color glow */
+    box-shadow: 0 0 10px #0ff0fc, 0 0 15px #0ff0fc;
+    max-width: 90%; /* Adjust based on your preference */
+    margin: auto; /* Center the grid container */
 }
 
 .gridContainer::after {
@@ -273,10 +275,11 @@ body {
 }
 
 .gridContainer img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-    cursor: pointer;
+    width: 100%; /* Make images take full width of the grid cell */
+    height: auto; /* Adjust height automatically to maintain aspect ratio */
+    object-fit: cover; /* Cover the grid cell area without breaking the aspect ratio */
+    display: block; /* Remove any inline element spacing */
+    border-radius: 5px; /* Optional: to add rounded corners to images */
 }
 
 .gridContainer img:hover {
