@@ -49,3 +49,7 @@ document.getElementById('buttonOne').addEventListener('click', function() {
         popup.style.display = 'flex';
     }
 });
+
+document.querySelector('.closePopupButton').addEventListener('click', function() {
+    document.getElementById('buttonOnePopup').style.display = 'none';
+});
