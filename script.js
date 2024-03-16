@@ -52,3 +52,24 @@ document.getElementById('buttonOne').addEventListener('click', function() {
 document.querySelector('.closePopupButton').addEventListener('click', function() {
     document.getElementById('buttonOnePopup').style.display = 'none';
 });
+
+document.getElementById('submitPasswordTwo').addEventListener('click', function() {
+    const passwordTwo = document.getElementById('passwordInputTwo').value;
+    if (passwordTwo === 'reversetherust') {
+        document.getElementById('whiteboard').style.display = 'grid'; // Show the whiteboard grid
+        document.querySelector('#buttonTwoPopup .passwordProtection').style.display = 'none'; // Hide the password input
+    } else {
+        alert('Incorrect password. Please try again.');
+    }
+});
+
+document.querySelector('#buttonTwoPopup .closePopupButton').addEventListener('click', function() {
+    document.getElementById('buttonTwoPopup').style.display = 'none';
+    // Optionally reset the whiteboard and password input for the next opening
+    document.getElementById('whiteboard').style.display = 'none';
+    document.querySelector('#buttonTwoPopup .passwordProtection').style.display = 'block';
+});
+
+document.getElementById('button2').addEventListener('click', function() {
+    document.getElementById('buttonTwoPopup').style.display = 'flex';
+});
