@@ -219,6 +219,8 @@ body {
     width: 80%;
     max-width: 600px;
     border-radius: 10px;
+    max-height: 80vh; /* Adjust the maximum height to fit within the viewport */
+    overflow: auto;
     background: #000; /* Black background */
     opacity: 0.9; /* Semi-transparency */
     box-shadow: 0 0 10px #0ff0fc, 0 0 15px #1f51ff, 0 0 20px #350b99, 0 0 25px #02ae23, 0 0 30px #39ff14; /* Glowing border */
@@ -250,7 +252,7 @@ body {
     background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     box-shadow: 0 0 10px #0ff0fc, 0 0 15px #0ff0fc;
-    max-width: 90%; /* Adjust based on your preference */
+    width: 100%; /* Adjust based on your preference */
     margin: auto; /* Center the grid container */
 }
 
@@ -279,7 +281,6 @@ body {
     height: auto; /* Adjust height automatically to maintain aspect ratio */
     object-fit: cover; /* Cover the grid cell area without breaking the aspect ratio */
     display: block; /* Remove any inline element spacing */
-    border-radius: 5px; /* Optional: to add rounded corners to images */
 }
 
 .gridContainer img:hover {
