@@ -222,7 +222,7 @@ body {
     max-height: 80vh; /* Adjust the maximum height to fit within the viewport */
     overflow: auto;
     background: #000; /* Black background */
-    opacity: 0.9; /* Semi-transparency */
+    opacity: 0.6; 
     box-shadow: 0 0 10px #0ff0fc, 0 0 15px #1f51ff, 0 0 20px #350b99, 0 0 25px #02ae23, 0 0 30px #39ff14; /* Glowing border */
 }
 
