@@ -314,3 +314,37 @@ body {
 .closePopupButton:hover {
     color: #0ff0fc; /* Adjust hover color to match your theme */
 }
+
+#buttonTwoPopup .popupContent {
+    background-color: #fff; /* Whiteboard background */
+    color: #000; /* Black text color for contrast */
+    border-radius: 10px;
+    padding: 20px;
+    position: relative; /* For positioning the close button */
+}
+
+#buttonTwoPopup .gridContainer.whiteboard {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    grid-gap: 10px;
+    padding: 20px;
+    display: none; /* Initially hidden */
+}
+
+#buttonTwoPopup .gridContainer.whiteboard img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.passwordProtection {
+    text-align: center; /* Center the password input and submit button */
+}
+
+.closePopupButton {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
