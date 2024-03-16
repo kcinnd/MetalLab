@@ -316,53 +316,33 @@ body {
 }
 
 #buttonTwoPopup .popupContent {
-    background-color: #fff; /* Whiteboard background */
+    background-color: rgba(255, 255, 255, 1); /* Opaque white */
     color: #000; /* Black text color for contrast */
     border-radius: 10px;
-    padding: 20px;
+    padding: 15px; /* Adjusted padding */
     position: relative; /* For positioning the close button */
+    box-shadow: 0 0 10px #1f51ff, 0 0 20px #1f51ff; /* Glowing effect */
+    max-height: 600px; /* Adjust based on your preference */
+    overflow: auto; /* Scroll inside popup if content overflows */
 }
 
 #buttonTwoPopup .passwordProtection {
     padding: 10px; /* Reduced padding */
-    text-align: center; /* Center the password input and submit button */
+    width: auto; /* Adjust width as necessary */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#buttonTwoPopup .gridContainer.whiteboard {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columns */
-    grid-gap: 10px;
-    padding: 20px;
-    display: none;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 0 10px #1f51ff, 0 0 20px #1f51ff, 0 0 30px #1f51ff; /* Glowing effect */
-    margin: auto;
-}
-
-#buttonTwoPopup .gridContainer.whiteboard img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.closePopupButton {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-#buttonTwoPopup #passwordInputTwo {
+#buttonTwoPopup #passwordInputTwo, #buttonTwoPopup #submitPasswordTwo {
+    width: 80%; /* Adjust width of input and button */
+    margin: 5px 0; /* Reduce margin */
     padding: 10px;
-    margin-bottom: 10px; /* Space between input and button */
     border: 2px solid #1f51ff; /* Border color same as Button 2 */
     background: transparent;
     color: #1f51ff;
     border-radius: 5px; /* Rounded corners */
     box-shadow: 0 0 5px #1f51ff, 0 0 10px #1f51ff; /* Glowing effect */
-    transition: box-shadow 0.3s ease-in-out;
 }
 
 #buttonTwoPopup #passwordInputTwo:focus {
@@ -371,19 +351,34 @@ body {
 }
 
 #buttonTwoPopup #submitPasswordTwo {
-    padding: 10px 20px;
-    border: none;
-    background-color: #1f51ff; /* Background color same as Button 2 */
-    color: #fff; /* White text */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease;
-    box-shadow: 0 0 5px #1f51ff, 0 0 10px #1f51ff; /* Glowing effect */
 }
 
 #buttonTwoPopup #submitPasswordTwo:hover {
     background-color: #0e38b1; /* Darker shade on hover */
     transform: scale(1.05); /* Slightly enlarge on hover */
     box-shadow: 0 0 10px #1f51ff, 0 0 20px #1f51ff; /* Intensify glow on hover */
+}
+
+#buttonTwoPopup .gridContainer.whiteboard {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    grid-gap: 10px;
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px 0; /* Added margin to the top and bottom */
+    display: none; /* Initially hidden */
+}
+
+#buttonTwoPopup .gridContainer.whiteboard img {
+    width: auto; /* Auto width for responsiveness */
+    height: 120px; /* Set a fixed height to make images larger */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    margin: auto; /* Center images within grid cells */
+}
+
+#buttonTwoPopup .gridContainer.whiteboard img:hover {
+    transform: scale(3); /* Triple in size on hover */
+    z-index: 2; /* Ensure the image is above others when enlarged */
+    position: relative; /* Needed for z-index to take effect */
 }
