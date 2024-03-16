@@ -7,7 +7,6 @@ document.getElementById('submitPassword').addEventListener('click', function() {
         document.getElementById('passwordInput').value = '';
     } else {
         alert('Incorrect password. Please try again.');
-        // Highlight the input box or show an error message for a better user experience
         document.getElementById('passwordInput').style.boxShadow = '0 0 10px #ff073a, 0 0 20px #ff073a, 0 0 30px #ff073a';
         setTimeout(() => {
             document.getElementById('passwordInput').style.boxShadow = '0 0 5px #39ff14, 0 0 10px #39ff14';
