@@ -323,6 +323,11 @@ body {
     position: relative; /* For positioning the close button */
 }
 
+#buttonTwoPopup .passwordProtection {
+    padding: 10px; /* Reduced padding */
+    text-align: center; /* Center the password input and submit button */
+}
+
 #buttonTwoPopup .gridContainer.whiteboard {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* 5 columns */
@@ -338,10 +343,7 @@ body {
     width: 100%;
     height: auto;
     object-fit: cover;
-}
-
-.passwordProtection {
-    text-align: center; /* Center the password input and submit button */
+    transition: transform 0.3s ease;
 }
 
 .closePopupButton {
