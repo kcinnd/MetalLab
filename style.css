@@ -359,6 +359,23 @@ body {
     color: #0ff0fc; /* Adjust hover color to match your theme */
 }
 
+#buttonTwoPopup .closePopupButton {
+    color: #1f51ff; /* Button Two's color */
+    font-size: 24px; /* Adjust size as needed */
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 0 5px #1f51ff, 0 0 10px #1f51ff; /* Initial glow matching Button Two */
+}
+
+#buttonTwoPopup .closePopupButton:hover {
+    transform: scale(1.2); /* Enlarges the button on hover */
+    color: #0e38b1; /* A darker shade for contrast */
+    box-shadow: 0 0 10px #1f51ff, 0 0 20px #1f51ff, 0 0 30px #1f51ff; /* More intense glow on hover */
+}
+
 #buttonTwoPopup .popupContent {
     display: flex;
     flex-direction: column;
@@ -367,7 +384,7 @@ body {
     background-color: #fff; /* Whiteboard background */
     box-shadow: 0 0 10px #1f51ff, 0 0 20px #1f51ff, 0 0 30px #1f51ff; /* Button Two glow */
     width: 80%; /* Adjust size as needed */
-    max-width: 600px; /* Max width for larger screens */
+    max-width: 800px; /* Max width for larger screens */
     margin: auto; /* Center horizontally */
     position: fixed;
     top: 50%;
