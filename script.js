@@ -101,3 +101,21 @@ document.getElementById('submitPasswordTwo').addEventListener('click', function(
         alert('Incorrect password. Please try again.');
     }
 });
+
+document.getElementById('buttonThree').addEventListener('click', function() {
+    document.getElementById('buttonThreePopup').style.display = 'flex'; // Show Button Three Popup
+});
+
+document.querySelector('#buttonThreePopup .closePopupButton').addEventListener('click', function() {
+    document.getElementById('buttonThreePopup').style.display = 'none'; // Hide Button Three Popup
+});
+
+document.getElementById('submitPasswordThree').addEventListener('click', function() {
+    const passwordThree = document.getElementById('passwordInputThree').value;
+    if (passwordThree === 'tarnishedsteel') {
+        document.querySelector('#buttonThreePopup .passwordProtection').style.display = 'none'; // Hide password input
+        document.getElementById('imageContainerThree').style.display = 'flex'; // Show image container
+    } else {
+        alert('Incorrect password. Please try again.');
+    }
+});
