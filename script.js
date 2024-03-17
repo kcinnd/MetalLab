@@ -51,27 +51,6 @@ document.querySelectorAll('#buttonOnePopup .gridContainer img').forEach(img => {
     });
 });
 
-document.getElementById('submitPasswordTwo').addEventListener('click', function() {
-    const passwordTwo = document.getElementById('passwordInputTwo').value;
-    if (passwordTwo === 'reversetherust') {
-        document.getElementById('whiteboard').style.display = 'grid'; // Show the whiteboard grid
-        document.querySelector('#buttonTwoPopup .passwordProtection').style.display = 'none'; // Hide the password input
-    } else {
-        alert('Incorrect password. Please try again.');
-    }
-});
-
-document.querySelector('#buttonTwoPopup .closePopupButton').addEventListener('click', function() {
-    document.getElementById('buttonTwoPopup').style.display = 'none';
-    // Optionally reset the whiteboard and password input for the next opening
-    document.getElementById('whiteboard').style.display = 'none';
-    document.querySelector('#buttonTwoPopup .passwordProtection').style.display = 'block';
-});
-
-document.getElementById('buttonTwo').addEventListener('click', function() {
-    document.getElementById('buttonTwoPopup').style.display = 'flex';
-});
-
 document.getElementById('buttonOne').addEventListener('click', function() {
     document.getElementById('buttonOnePopup').style.display = 'flex'; // Show the Button One popup
 });
@@ -106,4 +85,23 @@ document.querySelectorAll('#buttonOnePopup .gridContainer img').forEach(img => {
 // Continuing with your existing code for handling buttonTwoPopup, etc.
 document.getElementById('submitPasswordTwo').addEventListener('click', function() {
     // Logic for handling the second password submission...
+});
+
+document.getElementById('buttonTwo').addEventListener('click', function() {
+    document.getElementById('buttonTwoPopup').style.display = 'block'; // Show Button Two Popup
+});
+
+document.querySelector('#buttonTwoPopup .closePopupButton').addEventListener('click', function() {
+    document.getElementById('buttonTwoPopup').style.display = 'none'; // Close Button Two Popup
+});
+
+document.getElementById('submitPasswordTwo').addEventListener('click', function() {
+    const password = document.getElementById('passwordInputTwo').value;
+    if (password === 'reversetherust') {
+        // Hide password input and show whiteboard content
+        document.querySelector('#buttonTwoPopup .passwordProtection').style.display = 'none';
+        document.querySelector('#buttonTwoPopup .gridContainer.whiteboard').style.display = 'grid';
+    } else {
+        alert('Incorrect password. Please try again.');
+    }
 });
