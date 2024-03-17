@@ -421,7 +421,7 @@ body {
     gap: 10px;
     justify-items: center;
     align-items: center;
-    width: 100%; /* Full width of the popupContent */
+    width: 80%; /* Full width of the popupContent */
 }
 
 #buttonTwoPopup .gridContainer.whiteboard img {
@@ -430,7 +430,7 @@ body {
 }
 
 #buttonTwoPopup .gridContainer.whiteboard img:hover {
-    transform: scale(3); /* Triple in size */
+    transform: scale(4); /* Triple in size */
     position: relative; /* Keep within the popup */
     z-index: 2;
 }
