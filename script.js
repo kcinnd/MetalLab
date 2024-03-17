@@ -71,3 +71,39 @@ document.querySelector('#buttonTwoPopup .closePopupButton').addEventListener('cl
 document.getElementById('buttonTwo').addEventListener('click', function() {
     document.getElementById('buttonTwoPopup').style.display = 'flex';
 });
+
+document.getElementById('buttonOne').addEventListener('click', function() {
+    document.getElementById('buttonOnePopup').style.display = 'flex'; // Show the Button One popup
+});
+
+document.querySelector('#buttonOnePopup .closePopupButton').addEventListener('click', function() {
+    document.getElementById('buttonOnePopup').style.display = 'none'; // Hide the Button One popup
+});
+
+// New code for hover messages on images in buttonOnePopup
+document.querySelectorAll('#buttonOnePopup .gridContainer img').forEach(img => {
+    img.addEventListener('mouseenter', function(event) {
+        const message = this.getAttribute('data-message');
+        const popupMessage = document.createElement('div');
+        popupMessage.textContent = message;
+        popupMessage.classList.add('popupMessage');
+        document.body.appendChild(popupMessage);
+
+        // Position the hover message near the cursor
+        popupMessage.style.left = `${event.clientX + 10}px`; // Slightly to the right of the cursor
+        popupMessage.style.top = `${event.clientY + 10}px`; // Slightly below the cursor
+        popupMessage.style.position = 'absolute';
+        popupMessage.style.display = 'block';
+    });
+
+    img.addEventListener('mouseleave', function() {
+        // Remove all hover messages to prevent duplicates
+        const hoverMessages = document.querySelectorAll('.popupMessage');
+        hoverMessages.forEach(msg => msg.remove());
+    });
+});
+
+// Continuing with your existing code for handling buttonTwoPopup, etc.
+document.getElementById('submitPasswordTwo').addEventListener('click', function() {
+    // Logic for handling the second password submission...
+});
