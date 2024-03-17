@@ -434,3 +434,28 @@ body {
     position: relative; /* Keep within the popup */
     z-index: 2;
 }
+
+#buttonThreePopup .popupContent {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    box-shadow: 0 0 10px #350b99, 0 0 20px #350b99, 0 0 30px #350b99; /* Glow effect matching Button Three */
+    /* Other positioning and size styles similar to Button Two Popup */
+}
+
+#buttonThreePopup .passwordProtection input[type="password"],
+#buttonThreePopup .passwordProtection button {
+    /* Similar styles to Button Two's password input and button, but with Button Three's color */
+    box-shadow: 0 0 5px #350b99, 0 0 10px #350b99; /* Glow effect */
+    color: #350b99; /* Button Three's color */
+}
+
+#buttonThreePopup .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Take up full height of the popupContent */
+}
+
+#buttonThreePopup .imageContainer img {
+    max-width: 100%; /* Ensure the image fits within the popup */
+    max-height: 80vh; /* Adjust based on your preference */
+}
