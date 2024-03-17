@@ -310,10 +310,10 @@ body {
     display: none; /* Hidden by default, shown on hover */
     position: fixed;
     padding: 5px 10px;
-    background: #fff; /* White background */
+    background: rgba(255, 255, 255, 0.9);
     color: #000; /* Black text */
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 22px;
     box-shadow: 0 0 5px #0ff0fc; /* Glow effect */
 }
 
