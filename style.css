@@ -359,43 +359,50 @@ body {
     color: #0ff0fc; /* Adjust hover color to match your theme */
 }
 
-/* Styling for the initial password input popup section */
+#buttonTwoPopup .popupContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff; /* Whiteboard background */
+    box-shadow: 0 0 10px #1f51ff, 0 0 20px #1f51ff, 0 0 30px #1f51ff; /* Button Two glow */
+}
+
 #buttonTwoPopup .passwordProtection {
-    background-color: #000; /* Dark background for contrast */
-    padding: 20px; /* Sufficient padding around the input and button */
-    border-radius: 10px; /* Consistent rounded corners */
-    text-align: center; /* Center the elements */
-    box-shadow: 0 0 10px #1f51ff, 0 0 20px #1f51ff; /* Subtle glow effect */
+    margin-bottom: 20px;
 }
 
-#buttonTwoPopup #passwordInputTwo, 
-#buttonTwoPopup #submitPasswordTwo {
-    margin: 10px 0; /* Space between input and button */
-    width: 80%; /* Control the width for a more compact look */
+#buttonTwoPopup .passwordProtection input[type="password"] {
+    border: 2px solid #1f51ff;
+    padding: 10px;
+    color: #1f51ff;
+    background-color: transparent;
+    box-shadow: 0 0 5px #1f51ff, 0 0 10px #1f51ff; /* Button Two glow */
 }
 
-/* Ensuring the whiteboard section has distinct styling */
-#buttonTwoPopup .whiteboard {
-    display: none; /* Hidden initially, shown after correct password */
-    background-color: rgba(255, 255, 255, 1); /* Opaque white for the whiteboard */
-    padding: 20px;
-    margin-top: 20px; /* Space from the password section or top of popup */
-    box-shadow: 0 0 15px #1f51ff; /* Glowing effect specific to the whiteboard */
-    border-radius: 10px; /* Consistent rounded corners */
+#buttonTwoPopup .passwordProtection button {
+    background-color: #1f51ff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 5px #1f51ff, 0 0 10px #1f51ff; /* Button Two glow */
 }
 
 #buttonTwoPopup .gridContainer.whiteboard {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columns layout */
-    grid-gap: 10px; /* Space between images */
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
 }
 
 #buttonTwoPopup .gridContainer.whiteboard img {
-    transition: transform 0.3s ease; /* Smooth scaling transition */
+    width: 100px; /* Initial size */
+    transition: transform 0.3s ease;
 }
 
 #buttonTwoPopup .gridContainer.whiteboard img:hover {
-    transform: scale(3); /* Triple the size on hover */
-    z-index: 10; /* Ensure hovered image is above others */
-    cursor: pointer; /* Indicate interactive element */
+    transform: scale(3); /* Triple in size */
+    position: relative; /* Keep within the popup */
+    z-index: 2;
 }
