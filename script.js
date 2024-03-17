@@ -22,6 +22,14 @@ document.querySelector('.closeButton').addEventListener('click', function() {
     document.getElementById('instructionsPopup').style.display = 'none';
 });
 
+document.getElementById('buttonOne').addEventListener('click', function() {
+    document.getElementById('buttonOnePopup').style.display = 'flex'; // Show the Button One popup
+});
+
+document.querySelector('#buttonOnePopup .closePopupButton').addEventListener('click', function() {
+    document.getElementById('buttonOnePopup').style.display = 'none'; // Hide the Button One popup
+});
+
 document.querySelectorAll('#buttonOnePopup .gridContainer img').forEach(img => {
     img.addEventListener('mouseenter', function() {
         const message = this.getAttribute('data-message');
