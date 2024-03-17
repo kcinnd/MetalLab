@@ -31,19 +31,23 @@ document.querySelector('#buttonOnePopup .closePopupButton').addEventListener('cl
 });
 
 document.querySelectorAll('#buttonOnePopup .gridContainer img').forEach(img => {
-    img.addEventListener('mouseenter', function() {
+    img.addEventListener('mouseenter', function(event) {
         const message = this.getAttribute('data-message');
         const popupMessage = document.createElement('div');
         popupMessage.textContent = message;
         popupMessage.classList.add('popupMessage');
         document.body.appendChild(popupMessage);
-        popupMessage.style.left = `${event.pageX}px`;
-        popupMessage.style.top = `${event.pageY}px`;
+
+        // Positioning the hover message near the cursor
+        popupMessage.style.left = `${event.clientX + 10}px`; // Slightly to the right of the cursor
+        popupMessage.style.top = `${event.clientY + 10}px`; // Slightly below the cursor
+        popupMessage.style.position = 'absolute';
         popupMessage.style.display = 'block';
     });
 
     img.addEventListener('mouseleave', function() {
-        document.querySelector('.popupMessage').remove();
+        const hoverMessages = document.querySelectorAll('.popupMessage');
+        hoverMessages.forEach(msg => msg.remove()); // Remove all hover messages
     });
 });
 
