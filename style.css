@@ -212,7 +212,7 @@ body {
     display: flex;
 }
 
-.popupContent {
+#buttonOnePopup .popupContent {
     position: relative;
     margin: 15% auto;
     padding: 20px;
