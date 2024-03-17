@@ -3,7 +3,6 @@ document.getElementById('submitPassword').addEventListener('click', function() {
     if (password === 'corrosionprocess') {
         document.getElementById('overlay').style.display = 'none';
         document.getElementById('errorPopup').style.display = 'none';
-        // Optionally, reset the input field after successful entry
         document.getElementById('passwordInput').value = '';
     } else {
         alert('Incorrect password. Please try again.');
