@@ -22,34 +22,21 @@ document.querySelector('.closeButton').addEventListener('click', function() {
     document.getElementById('instructionsPopup').style.display = 'none';
 });
 
-document.querySelectorAll('.gridContainer img').forEach(item => {
-    item.addEventListener('mouseover', (event) => {
-        const message = event.target.getAttribute('data-message');
-        const hoverMessage = document.createElement('div');
-        hoverMessage.classList.add('hoverMessage');
-        hoverMessage.textContent = message;
-        document.body.appendChild(hoverMessage);
-        hoverMessage.style.display = 'block';
-        hoverMessage.style.left = `${event.pageX + 10}px`;
-        hoverMessage.style.top = `${event.pageY + 10}px`;
+document.querySelectorAll('#buttonOnePopup .gridContainer img').forEach(img => {
+    img.addEventListener('mouseenter', function() {
+        const message = this.getAttribute('data-message');
+        const popupMessage = document.createElement('div');
+        popupMessage.textContent = message;
+        popupMessage.classList.add('popupMessage');
+        document.body.appendChild(popupMessage);
+        popupMessage.style.left = `${event.pageX}px`;
+        popupMessage.style.top = `${event.pageY}px`;
+        popupMessage.style.display = 'block';
     });
 
-    item.addEventListener('mouseout', () => {
-        document.querySelector('.hoverMessage').remove();
+    img.addEventListener('mouseleave', function() {
+        document.querySelector('.popupMessage').remove();
     });
-});
-
-document.getElementById('buttonOne').addEventListener('click', function() {
-    var popup = document.getElementById('buttonOnePopup');
-    if (popup.style.display === 'flex') {
-        popup.style.display = 'none';
-    } else {
-        popup.style.display = 'flex';
-    }
-});
-
-document.querySelector('.closePopupButton').addEventListener('click', function() {
-    document.getElementById('buttonOnePopup').style.display = 'none';
 });
 
 document.getElementById('submitPasswordTwo').addEventListener('click', function() {
