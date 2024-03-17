@@ -155,17 +155,19 @@ body {
 #instructionsPopup {
     display: none; /* Hidden by default */
     position: fixed;
-    top: 50%;
+    top: 10%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center the popup */
+    transform: translate(-50%); /* Center the popup */
     width: 80%; /* Adjust based on your content */
     max-width: 600px; /* Maximum width */
+    height: 300px;
     padding: 20px;
     background: rgba(0, 0, 0, 0.7); /* Black semi-transparent background */
     border-radius: 10px;
     box-shadow: 0 0 10px #0ff0fc, 0 0 15px #1f51ff, 0 0 20px #350b99, 0 0 25px #02ae23, 0 0 30px #39ff14; /* Gradient glow */
     z-index: 1010; /* Ensure it's above other elements */
     color: #fff; /* White text color */
+    overflow: auto;
 }
 
 #instructionsPopup .closeButton {
