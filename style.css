@@ -191,7 +191,7 @@ body {
     border-radius: 12px; /* Rounded corners for consistency */
     background: linear-gradient(45deg, #0ff0fc, #1f51ff, #350b99, #02ae23, #39ff14);
     color: #000; /* Black text */
-    text-shadow: 0 0 5px #fff; /* White text glow */
+    text-shadow: 0 0 5px #fff; 
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
     box-shadow: 0 0 5px #fff, 0 0 10px #fff;
     margin-bottom: 50px;
