@@ -170,6 +170,15 @@ body {
     overflow: auto;
 }
 
+#instructionsPopup .popupContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+    height: 100%; /* Take full height of the popup */
+    text-align: center; /* Ensure text within is centered */
+}
+
 #instructionsPopup .closeButton {
     position: absolute;
     top: 10px;
